@@ -23,7 +23,7 @@ Architecture: `Intel(R) Core(TM) i7` / `64 bits, processeur x64`
 
 ## Configuring the environment
 
-### Add rc.exe to the `%PATH%
+### Add rc.exe to the %PATH%
 
 Add the path to the MSVC tools to your `%PATH%` (search for `rc.exe`, for example).
 
@@ -75,7 +75,7 @@ Modify the `CFLAGS` variable:
 
 ### Resource compiler (RC.EXE): configure the search paths for header files
 
-Modify the `RCFLAGS` variable:
+Edit the file "`makefile`", and modify the `RCFLAGS` variable:
 
     RC="rc"
     RCFLAGS=/i $(INCLUDE1) /i $(INCLUDE2) /i $(INCLUDE3) /i $(INCLUDE4)
@@ -100,13 +100,11 @@ Shortened paths are:
 * `C:\PROGRA~1\MICROS~4\2022\COMMUN~1\VC\Tools\MSVC\1440~1.338\lib\x64`
 * `C:\PROGRA~2\WI3CF2~1\10\Lib\100261~1.0\ucrt\x64`
 
-Add the following variables:
+Edit the file "`makefile`", add the following variables, and modify the `RCFLAGS` variable:
 
     LIB1=C:\PROGRA~2\WI3CF2~1\10\Lib\100261~1.0\um\x64
     LIB2=C:\PROGRA~1\MICROS~4\2022\COMMUN~1\VC\Tools\MSVC\1440~1.338\lib\x64
     LIB3=C:\PROGRA~2\WI3CF2~1\10\Lib\100261~1.0\ucrt\x64
-
-Modify the `RCFLAGS` variable:
 
     LD="link"
     LDFLAGS=/nologo /debug /LIBPATH:"$(LIB1)" /LIBPATH:"$(LIB2)" /LIBPATH:"$(LIB3)"
