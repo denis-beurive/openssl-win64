@@ -18,6 +18,7 @@ Architecture: `Intel(R) Core(TM) i7` / `64 bits, processeur x64`
 * Make sure both Perl and NASM are on your `%PATH%`.
 * Start PowerShell with administrator privileges.
 * Extract the content of the OpenSSL source archive.
+* `cd openssl-3.3.0`
 * Run `C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat amd64`.
 * Run `perl Configure VC-WIN64A` from the OpenSSL top directory.
 
